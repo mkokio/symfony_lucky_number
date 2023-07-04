@@ -2,18 +2,18 @@
 // src/Controller/LuckyController.php
 namespace App\Controller;
 
-//if creating route with routes.yaml: use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response; //import the Response class
+use Symfony\Component\Routing\Annotation\Route; //import the Route annotation class
 
 class LuckyController
 {
-    #[Route('/lucky/number')]
+    #[Route('/lucky/number')] //add route directly above the controller
     public function number(): Response
     {
         $number = random_int(0, 100);
 
         return new Response(
-            '<html><body>ラッキーナンバーは'.$number.'</body></html>'
+            '<html><body>（1~100）ラッキーナンバーは'.$number.'</body></html>'
         );
     }
 }
