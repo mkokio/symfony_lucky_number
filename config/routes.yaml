@@ -3,3 +3,8 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+#belox is not needed anymore since adding the route directly above the controller
+app_lucky_number:
+    path: /lucky/number
+    controller: App\Controller\LuckyController::number
